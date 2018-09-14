@@ -35,7 +35,8 @@ public class CharacterMove : MonoBehaviour {
         }
 
         // This code makes the character move side to side using the a&d keys
-        if(Input.GetKey (KeyCode.D)){
+        if(Input.GetKey (KeyCode.D))
+        {
             GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
         if (Input.GetKey(KeyCode.A))
