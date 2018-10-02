@@ -37,24 +37,38 @@ public class LevelManager : MonoBehaviour {
 
     public IEnumerator RespawnPCCo(){
         //Generate Death Particle
-        Instantiate (DeathParticle, PC.transform.position, PC.transform.rotation)
+        Instantiate(DeathParticle, PC.transform.position, PC.transform.rotation);
+
         //Hide Player
-        PC.enabled = false;
+        // PC.enable = false;
         PC.GetComponent<Renderer>().enabled = false;
 
         // Gravity Reset
         GravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
-        PC.GetComponent<Rigidbody2D>(.gravityScale) = 0f;
-        PC.GetComponent<Rigidbody2D>(.velocity) = Vector2.zero;
+        PC.GetComponent<Rigidbody2D>().gravityScale = 0f;
+        PC.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
         //Point Penalty
-        ScoreManager.AddPoints(-PointPanaltyOnDeath);
+        ScoreManager.AddPoints(-PointPenaltyOnDeath);
 
         // Debug Message
-        Debug.Log("Player Respawn");
+        Debug.Log("PC Respawn");
 
         // Respawn Delay
-        yield return new WaitForSeconds(respawnDelay);
+        yield return new WaitForSeconds(RespawnDelay);
+
+        // Gravity Restore
+        PC.GetComponent<Rigidbody2D>().gravityScale = GravityStore;
+
+        //Match players transform position
+        PC.transform.position = CurrentCheckPoint.transform.position;
+
+        //Show PC
+        // PC.enabled = true;
+        PC.GetComponent<Renderer>().enabled = true;
+
+        // Spawn PC
+        Instantiate(RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
 
     }
 }
