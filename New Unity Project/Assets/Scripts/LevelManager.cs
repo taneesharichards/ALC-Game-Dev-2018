@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour {
 
     public GameObject CurrentCheckPoint;
     public Rigidbody2D PC;
+    public GameObject PC2;
 
     // Particles
     public GameObject DeathParticle;
@@ -40,7 +41,8 @@ public class LevelManager : MonoBehaviour {
         Instantiate(DeathParticle, PC.transform.position, PC.transform.rotation);
 
         //Hide Player
-        // PC.enable = false;
+        // PC.enable = false
+        PC2.SetActive(false);
         PC.GetComponent<Renderer>().enabled = false;
 
         // Gravity Reset
@@ -65,6 +67,7 @@ public class LevelManager : MonoBehaviour {
 
         //Show PC
         // PC.enabled = true;
+        PC2.SetActive(true);
         PC.GetComponent<Renderer>().enabled = true;
 
         // Spawn PC
