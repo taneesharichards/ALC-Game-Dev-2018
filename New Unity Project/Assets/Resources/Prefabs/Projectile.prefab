@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 50
+  TimeOut: 10
   PC: {fileID: 0}
   EnemyDeath: {fileID: 0}
   ProjectileParticle: {fileID: 0}

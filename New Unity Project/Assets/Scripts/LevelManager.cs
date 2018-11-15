@@ -24,7 +24,8 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        // PC = FindObjectOfType<Rigidbody2D> ();
+        PC = GameObject.Find("PC").GetComponent<Rigidbody2D>();
+        PC2 = GameObject.Find("PC");
 	}
 	
 	// Update is called once per frame
@@ -42,8 +43,8 @@ public class LevelManager : MonoBehaviour {
 
         //Hide Player
         // PC.enable = false
-        PC2.SetActive(false);
         PC.GetComponent<Renderer>().enabled = false;
+        PC2.SetActive(false);
 
         // Gravity Reset
         GravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
