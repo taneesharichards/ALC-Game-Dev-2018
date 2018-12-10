@@ -8279,7 +8279,7 @@ Prefab:
         type: 2}
       propertyPath: PC
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 240788419}
     - target: {fileID: 114082104517656160, guid: ac1a6c06a22cc4dc680f7ddb01b109d1,
         type: 2}
       propertyPath: EnemyDeath
@@ -8289,7 +8289,7 @@ Prefab:
         type: 2}
       propertyPath: ProjectileParticle
       value: 
-      objectReference: {fileID: 1723829469}
+      objectReference: {fileID: 1069619001}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac1a6c06a22cc4dc680f7ddb01b109d1, type: 2}
   m_IsPrefabAsset: 0
@@ -10920,6 +10920,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0232be6b721054b31a6313a3506848cb, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1069619001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1351147239205808, guid: 0232be6b721054b31a6313a3506848cb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1069619000}
 --- !u!1001 &1072399471
 Prefab:
   m_ObjectHideFlags: 0
@@ -16026,11 +16031,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.29, y: 0.91}
   m_EdgeRadius: 0
---- !u!1 &1723829469 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1351147239205808, guid: 0232be6b721054b31a6313a3506848cb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1069619000}
 --- !u!1 &1728026430
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour {
 
         EnemyDeath = Resources.Load("Prefabs/Death_PS") as GameObject;
 
-        ProjectileParticle = Resources.Load("Prefabs/Projectile_P") as GameObject;
+        ProjectileParticle = Resources.Load("Prefabs/Projectile") as GameObject;
 
         // PC = FindObjectOfType<Rigidbody2D>();
         if (PC.transform.localScale.x < 0)
