@@ -10988,6 +10988,11 @@ Prefab:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114012100155716526, guid: e18c37f48cc034e9fbdaed4755977d70,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 240788426}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18c37f48cc034e9fbdaed4755977d70, type: 2}
   m_IsPrefabAsset: 0

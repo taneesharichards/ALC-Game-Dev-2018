@@ -18,11 +18,13 @@ public class CharacterMove : MonoBehaviour {
     //Non-stick Player
     private float moveVelocity;
 
+    public Animator animator;
 
 
     // Use this for initialization
     void Start () {
-        
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isJumping", false);
     }
     
     
@@ -51,6 +53,8 @@ public class CharacterMove : MonoBehaviour {
             // Non-stick player
             moveVelocity = 0f;
 
+
+
         // This code makes the character move side to side using the a&d keys
         if(Input.GetKey (KeyCode.D))
         {
@@ -73,5 +77,6 @@ public class CharacterMove : MonoBehaviour {
 
     public void Jump(){
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
+        animator.SetBool("isJumping", true);
     }
 }
