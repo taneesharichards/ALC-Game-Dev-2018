@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour {
 
         EnemyDeath = Resources.Load("Prefabs/Death_PS") as GameObject;
 
-        ProjectileParticle = Resources.Load("Prefabs/Projectile") as GameObject;
+        ProjectileParticle = Resources.Load("Prefabs/Projectile_P") as GameObject;
 
         // PC = FindObjectOfType<Rigidbody2D>();
         if (PC.transform.localScale.x < 0)
@@ -44,7 +44,7 @@ public class Projectile : MonoBehaviour {
             ScoreManager.AddPoints(PointsForKill);
         }
 
-        Instantiate(ProjectileParticle, transform.position, transform.rotation);
+        // Instantiate(ProjectileParticle, transform.position, transform.rotation);
         Destroy(gameObject);
 
         }
